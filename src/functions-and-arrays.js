@@ -1,34 +1,37 @@
-// Iteration 1 | Find the Maximum
-function maxOfTwoNumbers() {}
+function maxOfTwoNumbers(a, b) {
+  return a > b ? a : b
+}
 
+function findLongestWord(words) {
+  if (words.length === 0) return null
 
+  let longest = words[0]
+  for (let i = 1; i < words.length; i++) {
+    if (words[i].length > longest.length) {
+      longest = words[i]
+    }
+  }
+  return longest
+}
 
+function sumNumbers(numbers) {
+  let sum = 0
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i]
+  }
+  return sum
+}
 
-// Iteration 2 | Find the Longest Word
-const words = ["mystery", "brother", "aviator", "crocodile", "pearl", "orchard", "crackpot"];
+function averageNumbers(numbers) {
+  if (numbers.length === 0) return null
+  return sumNumbers(numbers) / numbers.length
+}
 
-function findLongestWord() {}
+function doesWordExist(words, word) {
+  if (words.length === 0) return null
 
-
-
-
-// Iteration 3 | Sum Numbers
-const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
-
-function sumNumbers() {}
-
-
-
-
-// Iteration 4 | Numbers Average
-const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
-
-function averageNumbers() {}
-
-
-
-
-// Iteration 5 | Find Elements
-const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", "truth", "disobedience"];
-
-function doesWordExist() {}
+  for (let i = 0; i < words.length; i++) {
+    if (words[i] === word) return true
+  }
+  return false
+}
